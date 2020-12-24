@@ -4,7 +4,7 @@ let bufferline = {}
 let bufferline.shadow = v:true
 
 " Enable/disable icons
-let bufferline.icons = v:true
+let bufferline.icons = 'both'
 
 " Enables/disable clickable tabs
 "  - left-click: go to buffer
