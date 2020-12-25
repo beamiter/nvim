@@ -31,5 +31,5 @@ let g:coc_global_extensions = [
   \ 'coc-git',
   \ 'coc-clangd',
   \ 'coc-highlight',
-  \ 'coc-tabnine',
   \ ]
+  " \ 'coc-tabnine',
