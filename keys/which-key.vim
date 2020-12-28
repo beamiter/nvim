@@ -90,7 +90,7 @@ let g:which_key_map.b = {
       \ '8' : [':BufferGoto 8'          , 'buffer 8'],
       \ '9' : [':BufferGoto 9'          , 'buffer 9'],
       \ '0' : [':BufferGoto 0'          , 'buffer 0'],
-      \ 'b' : [':BufferPick'            , 'pick buffer'],
+      \ 's' : [':BufferPick'            , 'pick buffer'],
       \ 'd' : [':Bdelete'               , 'delete-buffer'],
       \ 'D' : [':BufferOrderByDirectory', 'order by directory'],
       \ 'f' : ['bfirst'                 , 'first-buffer'],
@@ -98,7 +98,7 @@ let g:which_key_map.b = {
       \ 'L' : [':BufferOrderByLanguage' , 'order by language'],
       \ 'n' : ['bnext'                  , 'next-buffer'],
       \ 'p' : ['bprevious'              , 'previous-buffer'],
-      \ '?' : ['Buffers'                , 'fzf-buffer'],
+      \ 'b' : ['Buffers'                , 'fzf-buffer'],
       \ }
 
 " d is for debug
@@ -236,6 +236,11 @@ let g:which_key_map.S = {
       \ 'S' : [':SSave'           , 'Save Session']   ,
       \ }
 
+" nnoremap <leader>gf :<C-u>Git log <C-R>=expand("%")<CR><CR>
+function! GitCurrentFile()
+  execute 'Git log '.expand('%')
+endfunction
+
 " g is for git
 let g:which_key_map.g = {
       \ 'name' : '+git' ,
@@ -246,6 +251,7 @@ let g:which_key_map.g = {
       \ 'c' : [':Git commit'                         , 'commit'],
       \ 'd' : [':Git diff'                           , 'diff'],
       \ 'D' : [':Gdiffsplit'                         , 'diff split'],
+      \ 'f' : [':call GitCurrentFile()'              , 'log file'],
       \ 'g' : [':GGrep'                              , 'git grep'],
       \ 'G' : [':Gstatus'                            , 'status'],
       \ 'h' : [':GitGutterLineHighlightsToggle'      , 'highlight hunks'],

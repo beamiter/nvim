@@ -115,6 +115,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
     " neoformat
     Plug 'sbdchd/neoformat'
+    " indent line
+    Plug 'Yggdroot/indentLine'
+
     " Rainbow brackets
     " Plug 'luochen1990/rainbow'
     " Async Linting Engine
